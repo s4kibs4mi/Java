@@ -23,7 +23,7 @@ public class Assignment1_Problem1 {
 		return b;
 	}
 	
-	public int GreaterNumber(){
+	public int greaterNumber(){
 		if(a > b) return a;
 		else return b;
 	}
