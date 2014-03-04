@@ -2,7 +2,7 @@ public class Assignment1_Problem1 {
 	private int a;
 	private int b;
 	
-	public A1_P1(int a,int b){
+	public Assignment1_Problem1(int a,int b){
 		this.a = a;
 		this.b = b;
 	}
@@ -55,6 +55,4 @@ public class Assignment1_Problem1 {
 			System.out.printf("%c - ASCI\n",b);
 		else System.out.printf("%c - Extended ASCI\n",b%255);
 	}
-	
-	
 }
