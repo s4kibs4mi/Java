@@ -1,25 +1,30 @@
 public class NamingConventionCheck {
 	private String className;
-	private String methodName;
+	private String fieldName;
 	
+	// Constructor default
 	public NamingConventionCheck(){
 		className = null;
-		methodName = null;
+		fieldName = null;
 	}
 	
-	public NamingConventionCheck(String className , String methodName){
+	// Parametric Constructor
+	public NamingConventionCheck(String className , String fieldName){
 		this.className = className;
-		this.methodName = methodName;
+		this.fieldName = fieldName;
 	}
 	
+	// method to set class name
 	public void setClassName(String className){
 		this.className = className;
 	}
 	
-	public void setMethodName(String methodName){
-		this.methodName = methodName;
+	// method to set field name
+	public void setfieldName(String fieldName){
+		this.fieldName = fieldName;
 	}
 	
+	// Method to check is class name OK
 	public boolean isClassNameOk(){
 		int n = className.length();
 		
@@ -42,15 +47,31 @@ public class NamingConventionCheck {
 			
 			if(className.charAt(i) == ' ')
 				return false;
-			
-			
-			
 		}
 		return true;
 	}
 	
-	public boolean isMethodOk(){
+	// method to check is field name OK
+	public boolean isfieldNameOk(){
+		int n = fieldName.length();
 		
+		if(n == 0)
+			return false;
+		
+		if(Character.isUpperCase(fieldName.charAt(0)))
+			return false;
+		
+		if(fieldName.toUpperCase().equals(fieldName))
+			return false;
+		
+		if(n > 1 && Character.isUpperCase(fieldName.charAt(n-1)))
+			return false;
+		
+		for(int i = 0; i < n; i++){
+			
+			if(fieldName.charAt(i) == ' ')
+				return false;
+		}
 		return true;
 	}
 	
