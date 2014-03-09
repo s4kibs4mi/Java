@@ -1,3 +1,5 @@
+package test;
+
 public class NamingConventionCheck {
 	private String className;
 	private String methodName;
@@ -16,8 +18,8 @@ public class NamingConventionCheck {
 		this.className = className;
 	}
 	
-	public void setMethodName(String className){
-		this.methodName = className;
+	public void setMethodName(String methodName){
+		this.methodName = methodName;
 	}
 	
 	public boolean isClassNameOk(){
@@ -42,6 +44,8 @@ public class NamingConventionCheck {
 			
 			if(className.charAt(i) == ' ')
 				return false;
+			
+			
 			
 		}
 		return true;
