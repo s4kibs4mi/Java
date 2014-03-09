@@ -1,5 +1,3 @@
-package test;
-
 public class NamingConventionCheck {
 	private String className;
 	private String methodName;
