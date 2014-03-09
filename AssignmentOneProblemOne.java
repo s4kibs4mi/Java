@@ -1,8 +1,8 @@
-public class Assignment1_Problem1 {
+public class AssignmentOneProblemOne {
 	private int a;
 	private int b;
 	
-	public Assignment1_Problem1(int a,int b){
+	public AssignmentOneProblemOne(int a,int b){
 		this.a = a;
 		this.b = b;
 	}
