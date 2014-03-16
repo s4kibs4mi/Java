@@ -8,10 +8,10 @@ public class AssignmentOneProblemFive {
 		this.number1 = number1;
 		this.number2 = number2;
 	}
-	public void setA(long number1){
+	public void setNumber1(long number1){
 		this.number1 = number1;
 	}
-	public void setB(long number2){
+	public void setNumber2(long number2){
 		this.number2 = number2;
 	}
 	public boolean isGreater(){
