@@ -41,7 +41,7 @@ public class Complex {
 		Complex result = new Complex();
 		result.realNumber = realNumber - numberA.realNumber;
 		result.imaginaryNumber = imaginaryNumber - numberA.imaginaryNumber;
-		return result.realNumber + " - " + result.imaginaryNumber + "i";
+		return result.realNumber + " + " + result.imaginaryNumber + "i";
 	}
 	
 	public String multiplication(Complex numberA){
