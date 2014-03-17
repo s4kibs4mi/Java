@@ -1,8 +1,8 @@
 public class Test {
 
 	public static void main(String args[]){
-		Complex c1 = new Complex(8,6);
-		Complex c2 = new Complex(5,2);
+		Complex c1 = new Complex(8,6); // 8+6i 
+		Complex c2 = new Complex(5,2); // 5+2i
 		System.out.println("Number A : " + c1.displayNumber());
 		System.out.println("Number B : " + c2.displayNumber());
 		System.out.println("Addition : " + c1.addition(c2));
