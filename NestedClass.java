@@ -27,7 +27,7 @@ public class NestedClass {
 		
 		// Another Inner Class
 		public class ChildClass{
-			private String message = "Inner Class";
+			private String message = "Child Class";
 			public ChildClass(){}
 			public ChildClass(String message){
 				this.message = message;
