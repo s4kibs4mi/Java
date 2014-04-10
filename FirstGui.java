@@ -32,9 +32,15 @@ public class FirstGui extends JFrame{
 	
 	public class CustomActionListener implements ActionListener{
 		public void actionPerformed(ActionEvent e) {
-			int a = Integer.parseInt(textNum1.getText());
-			int b = Integer.parseInt(textNum2.getText());
-	        result.setText(" " + (a + b));
+			int a,b;
+			try{
+				a = Integer.parseInt(textNum1.getText());
+				b = Integer.parseInt(textNum2.getText());
+				result.setText(" " + (a + b));
+				
+			} catch(Exception ex){
+				result.setText("Invalid Input");
+			}
 	    }
 	}
 }
