@@ -1,5 +1,3 @@
-package tiktoktoe;
-
 /**
  * TikTokToe Game
  * Java Implementation : Sakib Sami
@@ -14,30 +12,54 @@ import javax.swing.*;
 
 public class TikTokToe extends JFrame {
 	// All needed fields
-	public boolean turn = true;
+	public boolean turn;
 	public String mark;
-	public String human = "X";
-	public String comp = "O";
-	public JLabel one = new JLabel("1");
-	public JLabel two = new JLabel("2");
-	public JLabel three = new JLabel("3");
-	public JLabel four = new JLabel("4");
-	public JLabel five = new JLabel("5");
-	public JLabel six = new JLabel("6");
-	public JLabel seven = new JLabel("7");
-	public JLabel eight = new JLabel("8");
-	public JLabel nine = new JLabel("9");
-	public JButton set = new JButton("Set");
-	public JButton exit = new JButton("Exit");
-	public JLabel msg = new JLabel("Human Turn");
-	public JLabel sign = new JLabel(human);
-	public JTextField input = new JTextField();
-	public JButton reset = new JButton("Reset");
+	public String human;
+	public String comp;
+	public JLabel one;
+	public JLabel two;
+	public JLabel three;
+	public JLabel four;
+	public JLabel five;
+	public JLabel six;
+	public JLabel seven;
+	public JLabel eight;
+	public JLabel nine;
+	public JButton set;
+	public JButton exit;
+	public JLabel msg;
+	public JLabel sign;
+	public JTextField input;
+	public JButton reset;
 	
 	// Constructor
 	public TikTokToe() {
+		initialize();
+	}
+	
+	public void initialize(){
+		// Initialization and making window
+		turn = true;
+		human = "X";
+		comp = "O";
+		one = new JLabel("1");
+		two = new JLabel("2");
+		three = new JLabel("3");
+		four = new JLabel("4");
+		five = new JLabel("5");
+		six = new JLabel("6");
+		seven = new JLabel("7");
+		eight = new JLabel("8");
+		nine = new JLabel("9");
+		set = new JButton("Set");
+		exit = new JButton("Exit");
+		msg = new JLabel("Human Turn");
+		sign = new JLabel(human);
+		input = new JTextField();
+		reset = new JButton("Reset");
+		
 		setLayout(new GridLayout(5, 3));
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setSize(300, 300);
 		setTitle("Tik Tok Toe");
 		add(one);
@@ -161,7 +183,8 @@ public class TikTokToe extends JFrame {
 	// Game Reset Action
 	public class ResetAction implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			repaint();
+			dispose();
+			new TikTokToe().setVisible(true);
 		}
 	}
 	
@@ -214,12 +237,15 @@ public class TikTokToe extends JFrame {
 
 				if (go.WiningCheck(mark)) {
 					String m;
-					if (turn)
+					if (turn){
 						m = "You Win";
-					else
+						sign.setText("Congrats");
+					}
+					else{
 						m = "You Lose";
+						sign.setText(":(");
+					}
 					msg.setText(m);
-					sign.setText("Congrats");
 				} else if (!go.DrawCheck()) {
 					String m = "Match Draw";
 					msg.setText(m);
