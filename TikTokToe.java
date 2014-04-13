@@ -1,5 +1,3 @@
-package tiktoktoe;
-
 /**
  * TikTokToe Game
  * Java Implementation : Sakib Sami
@@ -263,7 +261,7 @@ public class TikTokToe extends JFrame {
 	public class resetAction implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			dispose();
-			new GuiDesign().setVisible(true);
+			new TikTokToe().setVisible(true);
 		}
 	}
 
