@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-public class GuiDesign extends JFrame {
+public class TikTokToe extends JFrame {
 	// All needed data declaration
 	public boolean turn;
 	public String mark;
@@ -42,7 +42,7 @@ public class GuiDesign extends JFrame {
 	public JComboBox setData;
 
 	// Constractor
-	public GuiDesign() {
+	public TikTokToe() {
 		Initialize(); // fields initialiation method
 	}
 
