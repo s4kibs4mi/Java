@@ -1,5 +1,3 @@
-package tiktoktoe;
-
 /**
  * TikTokToe Game
  * Java Implementation : Sakib Sami
